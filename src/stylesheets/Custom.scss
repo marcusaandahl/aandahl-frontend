@@ -1,0 +1,28 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$maindark: #181818;
+$primaryblue: #326cf9;
+$lowkeyred: #c92c2c;
+$inactivegray: #707070;
+$logoyellow: #ffbc42;
+
+// Create your own map
+$custom-colors: (
+	"maindark": $maindark,
+	"primaryblue": $primaryblue,
+	"lowkeyred": $lowkeyred,
+	"inactivegray": $inactivegray,
+	"logoyellow": $logoyellow,
+);
+
+// Merge the maps
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$navbar-dark-color: $inactivegray;
+$navbar-dark-hover-color: $logoyellow;
+$navbar-dark-active-color: $logoyellow;
+
+@import "~bootstrap/scss/bootstrap";

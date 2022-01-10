@@ -1,0 +1,171 @@
+@import "../../stylesheets/shared.scss";
+
+.contactForm {
+	background-color: #262626;
+	border-radius: 20px;
+	box-sizing: border-box;
+	height: fit-content;
+	padding: 20px;
+	// width: 320px;
+	margin: 10px 20px;
+	position: relative;
+	.titleForm {
+		color: #eee;
+		font-family: "Cambay", sans-serif;
+		font-size: 26px;
+		font-weight: 600;
+		margin: 15px 5px;
+		text-align: center;
+	}
+	.contactContent {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		align-items: center;
+		.form {
+			padding: 0px 10px;
+			.input-container {
+				height: 50px;
+				position: relative;
+				width: 100%;
+				max-width: 280px;
+				.input {
+					background-color: #353535;
+					border-radius: 12px;
+					border: 0;
+					box-sizing: border-box;
+					color: #eee;
+					font-size: 14px;
+					height: 100%;
+					outline: 0;
+					padding: 4px 20px 0;
+					width: 100%;
+				}
+				.inputMsg {
+					height: auto;
+				}
+				.cut {
+					background-color: #262626;
+					border-radius: 10px;
+					height: 20px;
+					left: 20px;
+					position: absolute;
+					top: -20px;
+					transform: translateY(0);
+					transition: transform 200ms;
+					width: 76px;
+				}
+
+				.cutName {
+					width: 46px;
+				}
+
+				.cutEmail {
+					width: 44.5px;
+				}
+
+				.cutMsg {
+					width: 60px;
+				}
+
+				.input:focus ~ .cut,
+				.input:not(:placeholder-shown) ~ .cut {
+					transform: translateY(8px);
+				}
+
+				.placeholdr {
+					color: #65657b;
+					font-family: "Cambay", sans-serif;
+					left: 20px;
+					line-height: 14px;
+					pointer-events: none;
+					position: absolute;
+					transform-origin: 0 50%;
+					transition: transform 200ms, color 200ms;
+					top: 20px;
+					background-color: none;
+				}
+
+				.input:focus ~ .placeholdr,
+				.input:not(:placeholder-shown) ~ .placeholdr {
+					transform: translateY(-30px) translateX(10px) scale(0.75);
+				}
+
+				.input:not(:placeholder-shown) ~ .placeholdr {
+					color: #808097;
+				}
+
+				.input:focus ~ .placeholdr {
+					color: #dc2f55;
+				}
+			}
+
+			.msgContainer {
+				width: 100%;
+				max-width: none;
+			}
+
+			.ic1 {
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.ic2 {
+				margin-top: 20px;
+				margin-left: auto;
+				margin-right: auto;
+				height: auto;
+			}
+			.submit {
+				background-color: #08d;
+				border-radius: 12px;
+				border: 0;
+				box-sizing: border-box;
+				color: #eee;
+				cursor: pointer;
+				font-size: 18px;
+				height: 50px;
+				margin-top: 20px;
+				// outline: 0;
+				text-align: center;
+				width: 100%;
+			}
+
+			.submit:active {
+				background-color: #06b;
+			}
+			// margin-right: 20px;
+		}
+		.break {
+			height: 293px;
+			width: 1px;
+			background-color: #4e4e4e;
+		}
+		.links {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: auto;
+			margin-top: 72px;
+			margin-left: 10px;
+			.linkedInIcon {
+				height: 70px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+			}
+			.mailIcon {
+				fill: $lowkeyred;
+				height: 70px;
+				margin-top: 10px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
+}

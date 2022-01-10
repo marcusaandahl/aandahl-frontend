@@ -1,0 +1,76 @@
+// @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Manjari&family=Nunito&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&family=Nunito+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+
+$maindark: #181818;
+$primaryblue: #326cf9;
+$lowkeyred: #c92c2c;
+$inactivegray: #707070;
+$logoyellow: #ffbc42;
+
+body {
+	margin: 0;
+	padding: 0px;
+	margin: 0px;
+	font-size: 14px;
+	position: relative;
+}
+@mixin respond($breakpoint) {
+	@if ($breakpoint == "xxl") {
+		@media screen and (max-width: 1200px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "xl") {
+		@media screen and (max-width: 900px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "md") {
+		@media screen and (max-width: 768px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "sm") {
+		@media screen and (max-width: 600px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "xlmobile") {
+		@media screen and (max-width: 500px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "mobile") {
+		@media screen and (max-width: 450px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "lgmobile") {
+		@media screen and (max-width: 426px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "mdmobile") {
+		@media screen and (max-width: 376px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "xsmobile") {
+		@media screen and (max-width: 350px) {
+			@content;
+		}
+	}
+	@if ($breakpoint == "xxsmobile") {
+		@media screen and (max-width: 320px) {
+			@content;
+		}
+	}
+}
+// @mixin stroke($color: #000, $size: 1px) {
+// 	text-shadow: -#{$size} -#{$size} 0 $color, 0 -#{$size} 0 $color,
+// 		#{$size} -#{$size} 0 $color, #{$size} 0 0 $color, #{$size} #{$size} 0 $color,
+// 		0 #{$size} 0 $color, -#{$size} #{$size} 0 $color, -#{$size} 0 0 $color;
+// }

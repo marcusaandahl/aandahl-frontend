@@ -1,0 +1,38 @@
+@import "../../stylesheets/shared.scss";
+
+#navbar {
+	font-family: "Cambay", sans-serif;
+	font-size: 1.5rem;
+	background-color: rgba(7, 7, 7, 0.8);
+	padding: 0px 12% 0px 12%;
+	.navbar-brand {
+		.cvIcon {
+			fill: $inactivegray;
+			transition: fill 0.15s ease-in-out;
+			&:hover {
+				fill: $logoyellow;
+			}
+		}
+		.MAAlogo {
+			width: 62px;
+			height: 58px;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	#navbarToggler.collapsed {
+		margin-left: auto !important;
+	}
+	.navbar-nav {
+		align-items: center;
+	}
+	.nav-link {
+		padding-right: 2rem;
+		padding-left: 2rem;
+		font-weight: bold;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,211 @@
+@import "../../stylesheets/shared.scss";
+
+body {
+	position: relative;
+}
+
+.portfolio {
+	background-color: $maindark;
+	background-image: url("./assets/backgroundDesk.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@include respond("xxl") {
+		background-image: url("./assets/backgroundMobile.svg");
+	}
+	.landing {
+		display: flex;
+		flex-direction: column;
+		.buffer {
+			height: 68px;
+		}
+		.bigTitle {
+			height: calc(50vh - 68px);
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0px 10% 0px 10%;
+			.title {
+				font-family: "Cambay", sans-serif;
+				font-size: 7rem;
+				color: white;
+				@include respond("md") {
+					font-size: 4rem;
+				}
+			}
+			.subtitle {
+				font-family: "Cambay", sans-serif;
+				font-size: 1.5rem;
+				color: white;
+				padding: 0px 10% 0px 10%;
+				text-align: center;
+				@include respond("md") {
+					font-size: 1rem;
+				}
+			}
+		}
+		.icons {
+			height: 10vh;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			padding: 10px 0px 10px 0px;
+			.linkedInIcon {
+				height: 50px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+			}
+			.mailIcon {
+				fill: $lowkeyred;
+				height: 50px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+			}
+			.githubIcon {
+				height: 50px;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.2);
+				}
+			}
+		}
+		.CTA {
+			height: 40vh;
+			width: 100%;
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			.CTATitle {
+				font-family: "Cambay", sans-serif;
+				font-size: 2rem;
+				color: white;
+				padding: 0px 10% 0px 10%;
+				text-align: center;
+				width: 50%;
+				@include respond("md") {
+					padding: 0px;
+				}
+			}
+			.CTAButtons {
+				display: flex;
+				flex-direction: row;
+				align-content: center;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: nowrap;
+				.workBtn {
+					background-color: $primaryblue;
+					padding: 1rem 3rem 0.5rem 3rem;
+					font-family: "Cambay", sans-serif;
+					font-size: 20px;
+					color: white;
+					text-decoration: none;
+					margin: 5px;
+					border-radius: 1rem;
+					@include respond("sm") {
+						padding: 1rem 1.5rem 0.5rem 1.5rem;
+						@include respond("xsmobile") {
+							padding: 1rem 0.9rem 0.5rem 0.9rem;
+						}
+					}
+					&:hover {
+						background-color: #2953be;
+					}
+				}
+				.contactBtn {
+					padding: 1rem 3rem 0.5rem 3rem;
+					font-family: "Cambay", sans-serif;
+					font-size: 20px;
+					color: white;
+					text-decoration: none;
+					margin: 5px;
+					border-radius: 1rem;
+					border-color: $inactivegray;
+					@include respond("sm") {
+						padding: 1rem 1.5rem 0.5rem 1.5rem;
+						@include respond("xsmobile") {
+							padding: 1rem 0.9rem 0.5rem 0.9rem;
+						}
+					}
+				}
+			}
+		}
+	}
+	.projects {
+		height: auto;
+		padding: 73px 5% 3% 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		.title {
+			font-family: "Cambay", sans-serif;
+			font-size: 52px;
+			color: white;
+		}
+		.projectCards {
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+	.skills {
+		height: auto;
+		padding: 73px 5% 3% 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.title {
+			font-family: "Cambay", sans-serif;
+			font-size: 52px;
+			color: white;
+			margin-bottom: 2rem;
+		}
+		.wrap {
+			display: flex;
+			flex-direction: row;
+			align-content: center;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+	}
+	.contact {
+		width: 100%;
+		min-height: 100vh;
+		height: auto;
+		padding: 73px 5% 3% 5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		.title {
+			font-family: "Cambay", sans-serif;
+			font-size: 52px;
+			color: white;
+			margin-bottom: 2rem;
+		}
+	}
+}

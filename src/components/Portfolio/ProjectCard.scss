@@ -1,0 +1,171 @@
+@import "../../stylesheets/shared.scss";
+// Variables
+$dark-blue: #1e1b2d;
+$light-blue: #828092;
+$white: #fff;
+$black: #000;
+$open-sans: "Open Sans", sans-serif;
+
+.Pcontainer {
+	margin: auto;
+	width: 100%;
+	padding: 3rem;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: $open-sans;
+	font-weight: 300;
+}
+
+.row {
+	margin: auto 0;
+}
+
+// clear-fix mixin
+@mixin cf {
+	&::before,
+	&::after {
+		content: "";
+		display: table;
+	}
+	&::after {
+		clear: both;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.Pcard {
+	float: left;
+	padding: 1rem;
+	// display: flex;
+	// justify-content: center;
+	min-width: 500px;
+	@include respond("xlmobile") {
+		min-width: 450px;
+		@include respond("lgmobile") {
+			min-width: 425px;
+			@include respond("mdmobile") {
+				min-width: 375px;
+				@include respond("xsmobile") {
+					min-width: 320px;
+				}
+			}
+		}
+	}
+	.menu-content {
+		@include cf;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li {
+			display: inline-block;
+		}
+		a {
+			color: $white;
+		}
+	}
+	.wrapper {
+		background-color: $white;
+		min-height: 540px;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+		&:hover {
+			.data {
+				transform: translateY(0);
+			}
+		}
+	}
+	.data {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		transform: translateY(calc(80px + 1em));
+		transition: transform 0.3s;
+		.content {
+			padding: 1.5em;
+			position: relative;
+			z-index: 1;
+		}
+	}
+	.type {
+		font-size: 12px;
+	}
+	.title {
+		margin-top: 10px;
+		text-decoration: none;
+	}
+	.text {
+		height: 70px;
+		margin: 0;
+	}
+	input[type="checkbox"] {
+		display: none;
+	}
+	input[type="checkbox"]:checked + .menu-content {
+		transform: translateY(-60px);
+	}
+}
+
+.example {
+	.date {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #333;
+		color: #fff;
+		padding: 0.7em 0.7em 1.5rem 2.5em;
+		border-radius: 0 0 0 90%;
+		span {
+			display: block;
+			text-align: center;
+		}
+		.day {
+			font-weight: 700;
+			font-size: 24px;
+			text-shadow: 2px 3px 2px rgba($black, 0.18);
+		}
+		.month {
+			text-transform: uppercase;
+		}
+		.month,
+		.year {
+			font-size: 10px;
+		}
+	}
+	.Pcontent {
+		background-color: #333;
+		color: white;
+		box-shadow: 0 5px 30px 10px rgba($black, 0.3);
+		padding: 2em;
+	}
+	.title {
+		a {
+			color: white;
+		}
+	}
+	.menu-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 0%;
+		li {
+			text-align: center;
+			width: 3rem;
+			background-color: #333;
+			height: 3rem;
+			position: relative;
+			padding-top: 7px;
+		}
+		a {
+			font-size: 24px;
+		}
+	}
+}
