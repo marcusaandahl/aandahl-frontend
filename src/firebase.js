@@ -5,6 +5,7 @@ import { getFirestore, collection, getDocs, setDoc, deleteDoc } from "firebase/f
 import { getFunctions } from "firebase/functions";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+import { httpsCallable } from 'firebase/functions';
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -58,11 +59,27 @@ async function delProject(title) {
   await deleteDoc(projectsRef).catch(() => {});
 }
 
-async function sendMail(data) {
-  const mailRef = collection(firestore, "mail");
-  await setDoc(mailRef, data).catch(() => {})
+async function getAllUsers() {
+  const getUsers = httpsCallable(functions, 'users-getUsers');
+  const res = await getUsers();
+  return res;
+};
+
+async function delUser(uid, role) {
+  const delUser = httpsCallable(functions, 'users-delUser');
+  return await delUser({uid, role});
+}
+
+async function makeUserMod(uid, role) {
+  const makeUserMod = httpsCallable(functions, 'users-makeUserMod');
+  return await makeUserMod({uid, role});
+}
+
+async function makeUserBase(uid, role) {
+  const makeUserBase = httpsCallable(functions, 'users-makeUserBase');
+  return await makeUserBase({uid, role});
 }
 
 
 
-export { firebaseApp, firestore, functions, auth, storage, getProjects, addProject, delProject, sendMail };
+export { firebaseApp, firestore, functions, auth, storage, getProjects, addProject, delProject, getAllUsers, delUser, makeUserMod, makeUserBase };
