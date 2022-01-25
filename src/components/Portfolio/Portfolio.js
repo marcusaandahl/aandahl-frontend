@@ -61,7 +61,7 @@ function Portfolio() {
                 <div className="buffer" />
                 <div className="bigTitle">
                     <h1 className="title">Welcome!</h1>
-                    <h4 className="subtitle">My name is Marcus Andreas Aandahl, and I am a full-stack dev based in Copenhagen, spending most of his time building cool projects.</h4>
+                    <h4 className="subtitle">My name is Marcus Andreas Aandahl, and I am a full-stack developer based in Copenhagen, spending most of my time building cool projects.</h4>
                 </div>
                 <div className="icons">
                     <LinkedinSVG className="linkedInIcon" onClick={(e) => clickLink('linkedIn', e)} alt="LinkedIn"/>

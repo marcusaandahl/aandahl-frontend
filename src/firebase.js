@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs, setDoc, deleteDoc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, deleteDoc, query, where, addDoc, doc } from "firebase/firestore";
 import { getFunctions } from "firebase/functions";
 import { getAuth } from "firebase/auth";
 import { getStorage } from "firebase/storage";
@@ -50,13 +50,20 @@ async function getProjects() {
 }
 
 async function addProject(data) {
+  console.log(data);
   const projectsRef = collection(firestore, "projects");
-  await setDoc(projectsRef, data).catch(() => {})
+  await addDoc(projectsRef, data).catch(() => {});
 }
 
 async function delProject(title) {
-  const projectsRef = collection(firestore, "projects").where('title', '==', title);
-  await deleteDoc(projectsRef).catch(() => {});
+  const quer = query(collection(firestore, "projects"), where("title", "==", title));
+
+  const querySnapshot = await getDocs(quer);
+  querySnapshot.forEach(async (docu) => {
+    await deleteDoc(doc(firestore, "projects", docu.id));
+  });
+  alert('Project Deleted')
+  // await deleteDoc(projectQuery).catch(() => {});
 }
 
 async function getAllUsers() {

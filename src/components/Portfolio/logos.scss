@@ -6,7 +6,7 @@
 	&.tech {
 		width: 368px;
 		height: 251px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			width: 287.5px;
 			height: 214.5px;
 		}
@@ -14,7 +14,7 @@
 	&.lang {
 		width: 271px;
 		height: 251px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			width: 213px;
 			height: 215px;
 		}
@@ -26,7 +26,7 @@
 		&:hover {
 			cursor: pointer;
 		}
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			width: 64.5px;
 			height: 64.5px;
 		}
@@ -34,7 +34,7 @@
 	.rails {
 		left: 97px;
 		top: 0px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 74px;
 			top: 0;
 		}
@@ -42,7 +42,7 @@
 	.react {
 		left: 194px;
 		top: 0px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 153px;
 			top: 0px;
 		}
@@ -50,7 +50,7 @@
 	.node {
 		left: 49px;
 		top: 87px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 37px;
 			top: 75px;
 		}
@@ -58,7 +58,7 @@
 	.express {
 		left: 146px;
 		top: 87px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 111px;
 			top: 75px;
 		}
@@ -66,7 +66,7 @@
 	.jquery {
 		left: 243px;
 		top: 87px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 185px;
 			top: 75px;
 		}
@@ -74,7 +74,7 @@
 	.axios {
 		left: 0px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 0px;
 			top: 150px;
 		}
@@ -82,7 +82,7 @@
 	.psql {
 		left: 97px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 74.5px;
 			top: 150px;
 		}
@@ -90,7 +90,7 @@
 	.bootstrap {
 		left: 194px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 149px;
 			top: 150px;
 		}
@@ -98,7 +98,7 @@
 	.gsap {
 		left: 291px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 223px;
 			top: 150px;
 		}
@@ -106,7 +106,7 @@
 	.python {
 		left: 97px;
 		top: 0px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 75px;
 			top: 0px;
 		}
@@ -114,7 +114,7 @@
 	.js {
 		left: 48px;
 		top: 87px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 37px;
 			top: 75px;
 		}
@@ -122,7 +122,7 @@
 	.java {
 		left: 145px;
 		top: 87px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 112px;
 			top: 75px;
 		}
@@ -130,7 +130,7 @@
 	.css {
 		left: 0px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 0px;
 			top: 150px;
 		}
@@ -138,7 +138,7 @@
 	.html {
 		left: 97px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 74.5px;
 			top: 150px;
 		}
@@ -146,7 +146,7 @@
 	.ruby {
 		left: 194px;
 		top: 174px;
-		@include respond("mdmobile") {
+		@include respond("lgmobile") {
 			left: 149px;
 			top: 150px;
 		}

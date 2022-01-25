@@ -61,16 +61,22 @@ function Admin() {
         var expression = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
         var regexLink = new RegExp(expression);
         if (formContent.link.match(regexLink) && formContent.github.match(regexLink)) {
-            addProject(formContent).then(() => {
+            const cont = {
+                title: formContent.title,
+                subtitle: formContent.subtitle,
+                description: formContent.description,
+                pictureName: formContent.pictureName,
+                link: formContent.link,
+                github: formContent.github,
+                date: formContent.date,
+                month: formContent.month,
+                year: formContent.year
+            }
+            addProject(cont).then(() => {
                 alert('Project added successfully')
                 updateProjects();
             })
             .catch(err => alert(err))
-            // const addProject = httpsCallable(functions, 'projects-add');
-            // addProject(formContent).then(function (res) {
-            //     alert("Successfully added project.")
-            //     getProjects();
-            // })
         } else {
             alert("Links were not valid");
             return false;
@@ -162,7 +168,7 @@ function Admin() {
                                 </form>
                             </div>
                             <div className="deleteProject">
-                                {projects.map((project, index) => { return <div className="projDel" key={`project${index}`}><p>{project.title}</p><button className="btn btn-primary" onClick={() => delProject(project.title)}>X</button></div>})}
+                                {projects.map((project, index) => { return <div className="projDel" key={`project${index}`}><p>{project.title}</p><button className="btn btn-primary" onClick={() => delProject(project.title).then(() => {updateProjects()})}>X</button></div>})}
                             </div>
                         </div>
                     </div>

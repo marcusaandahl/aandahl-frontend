@@ -71,8 +71,8 @@ function ProjectCard(props) {
                     <span className="year">{props.year}</span>
                 </div>
                 <ul className="menu-content">
-                    <li><a href={props.link} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a></li>
-                    <li><a href={props.github} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+                    {props.link ? <li><a href={props.link} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faArrowUpRightFromSquare} /></a></li> : ''}
+                    {props.github ? <li><a href={props.github} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li> : '' }
                 </ul>
                 <div className="data">
                     <div className="Pcontent">
