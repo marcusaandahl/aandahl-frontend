@@ -21,7 +21,7 @@ function Navbar() {
                         <div id='navbar-contact' className="nav-link">Contact</div>
                     </div>
                 </div>
-                <a className="navbar-brand d-none d-md-block d-lg-block" target="_blank" rel="noreferrer" href="https://firebasestorage.googleapis.com/v0/b/portfolio-336519.appspot.com/o/portfolio%2Fcv%2FCV_EN_271221.pdf?alt=media&token=fc787845-4ff4-4690-8333-bee0a69d776a">
+                <a className="navbar-brand d-none d-md-block d-lg-block" target="_blank" rel="noreferrer" href="https://firebasestorage.googleapis.com/v0/b/portfolio-336519.appspot.com/o/portfolio%2Fcv%2FCV%20Light.pdf?alt=media&token=39284b36-486c-40fb-b9ee-6283a576ba17">
                     <CVIcon className="cvIcon"/>
                 </a>
             </div>

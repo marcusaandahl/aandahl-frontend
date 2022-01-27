@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 import { functions } from '../../firebase.js';
 import { httpsCallable } from 'firebase/functions';
+import {ReactComponent as CVIcon} from './assets/cvIcon.svg';
 
 class ContactForm extends Component {
 
@@ -107,6 +108,9 @@ class ContactForm extends Component {
                     <div className="links">
                         <LinkedinSVG className="linkedInIcon" onClick={(e) => this.clickLink('linkedIn', e)} alt="LinkedIn"/>
                         <MailSVG className="mailIcon" onClick={(e) => this.clickLink('mail', e)} alt="Mail"/>
+                        <a className="d-block mx-auto" target="_blank" rel="noreferrer" href="https://firebasestorage.googleapis.com/v0/b/portfolio-336519.appspot.com/o/portfolio%2Fcv%2FCV%20Light.pdf?alt=media&token=39284b36-486c-40fb-b9ee-6283a576ba17">
+                            <CVIcon className="cvIcon"/>
+                        </a>
                     </div>
                 </div>
             </div> 
